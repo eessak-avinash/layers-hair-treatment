@@ -132,6 +132,7 @@ ul {
 .btn-primary {
 	background-color: var(--color-medical-teal);
 	color: var(--color-white);
+    border: 1px solid #8ccad1;
 	box-shadow: 0 4px 15px rgba(51, 121, 131, 0.3);
 	animation: pulse-teal 2s infinite;
 }
