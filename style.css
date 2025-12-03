@@ -558,6 +558,14 @@ details[open] summary::after {
 	padding-top: 30px;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+.images {
+	border-radius: 0.8rem;
+	overflow: hidden;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+	width: 28rem;
+	height: 15rem;
+	object-fit: cover;
+}
 
 @media (max-width: 768px) {
 	.mobile-toggle {
@@ -590,13 +598,21 @@ details[open] summary::after {
 	.treatment-card:hover {
 		transform: none;
 	}
+		.treatment-container {
+		padding: 0 16px 40px 16px !important;
+	}
+
 	.treatment-images-container {
 		gap: 16px;
 		flex-direction: column;
+		align-items: stretch;
 	}
+
 	.images {
-		width: 240px;
-		height: 120px;
+		width: 100% !important;
+		max-width: 100%;
+		height: auto !important;
+		object-fit: cover;
 	}
 }
 
