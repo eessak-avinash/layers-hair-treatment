@@ -173,7 +173,7 @@ const HomePage = () => {
 							Book Consultation
 						</a>
 					</div>
-					<div className="form-component">
+					<div className="">
 						<BasicForm />
 					</div>
 				</section>

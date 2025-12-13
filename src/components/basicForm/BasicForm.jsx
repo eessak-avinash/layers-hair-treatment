@@ -1,22 +1,35 @@
 import { useForm } from "react-hook-form";
-import "./BasicForm.scss"
+import "./BasicForm.scss";
 
 export default function BasicForm() {
-    const {register, reset, handleSubmit, formState: {isSubmitting, errors}} = useForm();
-     const onSubmit = (data) => {
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { isSubmitting, errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
     console.log("Form Data:", data);
     reset();
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form animate-on-scroll">
 
+      <h3 className="form-title">Request a Call From Our Experts</h3>
+      <p className="form-subtitle">
+        Talk to our hair treatment expert today
+      </p>
+
       <div className="field">
-        <label>Name <span className="mandatory-field">*</span></label>
-        <div style={{display: 'flex', flexDirection: 'column', gap: '0.25rem', alignItems:'flex-start', width: '100%'}}>
-                    <input
+        <label>
+          Name <span className="mandatory-field">*</span>
+        </label>
+        <input
           type="text"
           className="input"
-          placeholder="Enter your name"
+          placeholder="Your full name"
           {...register("name", {
             required: "Name is required",
             minLength: {
@@ -26,16 +39,16 @@ export default function BasicForm() {
           })}
         />
         {errors.name && <span className="error">{errors.name.message}</span>}
-        </div>
       </div>
 
       <div className="field">
-        <label>Phone Number <span className="mandatory-field">*</span></label>
-        <div style={{display: 'flex', flexDirection: 'column', gap: '0.25rem',  alignItems:'flex-start', width: '100%'}}>
-                    <input
+        <label>
+          Phone Number <span className="mandatory-field">*</span>
+        </label>
+        <input
           type="tel"
-          placeholder="Enter phone number"
-                   className="input"
+          className="input"
+          placeholder="10-digit mobile number"
           {...register("phone", {
             required: "Phone number is required",
             pattern: {
@@ -44,26 +57,24 @@ export default function BasicForm() {
             },
           })}
         />
-        {errors.phone && (
-          <span className="error">{errors.phone.message}</span>
-        )}
-        </div>
+        {errors.phone && <span className="error">{errors.phone.message}</span>}
       </div>
 
       <div className="field">
         <label>Message</label>
         <textarea
-          placeholder="Type your message..."
           className="textbox"
-          rows="4"
+          rows="3"
+          placeholder="Your concern (optional)"
           {...register("message")}
         />
       </div>
 
       <button type="submit" disabled={isSubmitting} className="submit-btn">
-        Submit
+        {isSubmitting ? "Submitting..." : "Request a Callback"}
       </button>
+
+      <p className="form-trust">🔒 Your information is 100% confidential</p>
     </form>
   );
-
 }
