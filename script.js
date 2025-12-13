@@ -75,7 +75,7 @@ window.addEventListener("scroll", () => {
 	sections.forEach((section) => {
 		const sectionTop = section.offsetTop - 120;
 		const sectionHeight = section.offsetHeight;
-		const scrollView = window.scrollY + 305;
+		const scrollView = window.scrollY + 350;
 
 		console.log(scrollView);
 		console.log(sectionTop);

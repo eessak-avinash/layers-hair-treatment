@@ -212,6 +212,30 @@ ul {
 	width: 100%;
 }
 
+.header-call-btn {
+    background-color: #681c3a;
+    color: #ffffff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #d97a96;
+    transition: all 0.3s ease;
+}
+
+.pulse-maroon-btn {
+    animation: pulse-maroon 2s infinite;
+}
+
+.header-call-btn:hover {
+    background-color: #8c2b52;
+    transform: translateY(-2px);
+    animation-play-state: paused; 
+}
+
 .mobile-toggle {
 	display: none;
 	font-size: 28px;
