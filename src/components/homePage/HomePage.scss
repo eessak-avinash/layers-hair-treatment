@@ -645,14 +645,20 @@ details[open] summary::after {
 }
 
 .header-logo {
-	max-width: 160px;
+	max-width: 280px;
 	width: 100%;
 	height: auto;
 }
 
+@media (max-width: 1080px) {
+	.header-logo {
+		max-width: 240px;
+	}
+}
+
 @media (max-width: 768px) {
 	.header-logo {
-		max-width: 120px;
+		max-width: 180px;
 	}
 	  .slider-track {
     animation-duration: 45s;
@@ -744,5 +750,94 @@ p {
 
   .hero-content {
     width: 60%;
+  }
+}
+
+@media (max-width: 540px) {
+
+  /* HERO SECTION */
+  .hero {
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* FORM */
+  .form {
+    width: 100%;
+    padding: 1rem 0.9rem;
+    border-radius: 0.6rem;
+  }
+
+  .input,
+  .textbox {
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 0.85rem;
+  }
+
+  /* TREATMENT SLIDER */
+  .treatment-container {
+    padding: 0 12px 32px 12px !important;
+  }
+
+  .treatment-images-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .slider-track {
+    gap: 12px;
+    animation-duration: 55s;
+  }
+
+  .images {
+    width: 180px;
+    height: 110px; 
+    border-radius: 0.6rem;
+  }
+
+  .before-and-after-section {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+
+  .nav-menu {
+    padding: 20px;
+    gap: 16px;
+  }
+    .header-call-btn {
+    font-size: 10px;
+    padding: 0.35rem 0.5rem;
+    letter-spacing: 0.3px;
+    border-radius: 999px;
+  }
+
+  .btn-primary {
+    font-size: 12px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    box-shadow: 0 3px 10px rgba(51, 121, 131, 0.25);
+    animation-duration: 2.5s;
+  }
+
+  .btn-primary:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(51, 121, 131, 0.3);
   }
 }
