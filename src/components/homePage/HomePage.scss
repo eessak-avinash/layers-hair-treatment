@@ -790,7 +790,6 @@ p {
     padding: 0.85rem;
   }
 
-  /* TREATMENT SLIDER */
   .treatment-container {
     padding: 0 12px 32px 12px !important;
   }
@@ -839,5 +838,19 @@ p {
   .btn-primary:hover {
     transform: none;
     box-shadow: 0 4px 15px rgba(51, 121, 131, 0.3);
+  }
+  .mobile-toggle {
+	font-size: 18px;
+  }
+}
+
+@media(max-width: 360px) {
+	  .header-call-btn {
+    font-size: 9px;
+    padding: 0.3rem 0.45rem;
+    letter-spacing: 0.2px;
+    border-radius: 999px;
+	align-items: center;
+	justify-content: center;
   }
 }
