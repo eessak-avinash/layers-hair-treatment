@@ -1,13 +1,14 @@
 :root {
-	--color-root-brown: #653d28;
-	--color-root-brown-dark: #4a2b1b;
-	--color-medical-teal: #337983;
-	--color-skin-accent: #fdb380;
-	--color-hover-teal: #5cc3b1;
-	--color-text-main: #2c2c2c;
-	--color-text-muted: #666666;
+	--color-root-brown: #681c3a;
+	--color-root-brown-dark: #4d152b;
+	--color-medical-teal: #8c2b52;
+	--color-skin-accent: #d97a96;
+	--color-hover-teal: #b84a6f;
+	--color-text-main: #681c3a;
+	--color-text-muted: #8a5670;
 	--color-bg-light: #f8fbfb;
 	--color-white: #ffffff;
+	--color-black: #f8eef1;
 	--max-width: 1200px;
 	--header-height: 80px;
 	--border-radius: 8px;
@@ -95,15 +96,15 @@ ul {
 	transition-delay: 0.3s;
 }
 
-@keyframes pulse-teal {
+@keyframes pulse-maroon {
 	0% {
-		box-shadow: 0 0 0 0 rgba(51, 121, 131, 0.4);
+		box-shadow: 0 0 0 0 rgba(104, 28, 58, 0.4);
 	}
 	70% {
-		box-shadow: 0 0 0 10px rgba(51, 121, 131, 0);
+		box-shadow: 0 0 0 10px rgba(104, 28, 58, 0);
 	}
 	100% {
-		box-shadow: 0 0 0 0 rgba(51, 121, 131, 0);
+		box-shadow: 0 0 0 0 rgba(104, 28, 58, 0);
 	}
 }
 
@@ -134,7 +135,7 @@ ul {
 	color: var(--color-white);
     border: 1px solid #8ccad1;
 	box-shadow: 0 4px 15px rgba(51, 121, 131, 0.3);
-	animation: pulse-teal 2s infinite;
+	animation: pulse-maroon 2s infinite;
 }
 
 .btn-primary:hover {
@@ -150,7 +151,7 @@ ul {
 
 .site-header {
 	height: var(--header-height);
-	background: var(--color-white);
+	background: var(--color-black);
 	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 	position: sticky;
 	top: 0;
@@ -171,6 +172,8 @@ ul {
 	color: var(--color-root-brown);
 	font-family: var(--font-heading);
 	letter-spacing: 1px;
+	display: flex;
+	align-items: center;
 }
 
 .nav-menu {
@@ -181,13 +184,17 @@ ul {
 .nav-link {
 	font-weight: 600;
 	font-size: 15px;
-	color: var(--color-root-brown);
+	color: #4a4a4a;
 	position: relative;
 }
 
 .nav-link.active {
-  color: var(--color-medical-teal);
+  color: var(--color-text-main);
   font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--color-text-main);
 }
 
 .nav-link::after {
@@ -213,11 +220,11 @@ ul {
 }
 
 .hero {
-	background: linear-gradient(
-		135deg,
-		rgba(101, 61, 40, 0.95),
-		rgba(51, 121, 131, 0.9)
-	);
+background: linear-gradient(
+    130deg,
+    rgba(104, 28, 58, 0.95) 10%,
+    rgba(0, 0, 0, 0.9) 100%
+);
 	background-size: cover;
 	padding: 140px 0 120px;
 	color: var(--color-white);
@@ -316,7 +323,7 @@ ul {
 
 .treatment-card:hover {
 	transform: translateY(-10px);
-	box-shadow: 0 15px 40px rgba(51, 121, 131, 0.15);
+	box-shadow: 0 15px 40px rgba(104, 28, 58, 0.15);
 }
 
 .treatment-icon {
@@ -565,6 +572,18 @@ details[open] summary::after {
 	width: 28rem;
 	height: 15rem;
 	object-fit: cover;
+}
+
+.header-logo {
+	max-width: 160px; 
+	width: 100%;    
+	height: auto;       
+}
+
+@media (max-width: 768px) {
+	.header-logo {
+		max-width: 120px;
+	}
 }
 
 @media (max-width: 768px) {
