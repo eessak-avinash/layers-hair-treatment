@@ -173,7 +173,7 @@ const HomePage = () => {
 							Book Consultation
 						</a>
 					</div>
-					<div style={{ width: "30%" }}>
+					<div className="form-component">
 						<BasicForm />
 					</div>
 				</section>
