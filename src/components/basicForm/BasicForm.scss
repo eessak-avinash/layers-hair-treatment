@@ -1,0 +1,80 @@
+:root {
+    --error-color: #ffd6e0;
+    --border-color: #dadbdd;
+    --focus-border-color: #8c2b52;
+    --color-text-main: #681c3a;
+    --btn-bg-color: rgba(250, 226, 152, 1);
+    --color-white: #ffffff;
+}
+
+.form {
+	max-width: 40rem;
+	padding: 1.4rem 1rem;
+	background-color: rgba(48, 8, 27, 0.74);
+	border-radius: 0.75rem;
+	box-shadow: 0 0 16px 0 #616161;
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+	gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+}
+.input {
+	background-clip: padding-box;
+	background-image: none;
+	border: 1px solid var(--border-color);
+	border-radius: 0.5rem;
+	color: var(--color-text-main);
+	line-height: 1;
+	margin-bottom: 0;
+	width: 100%;
+	padding: 11px 15px;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.textbox {
+	background-clip: padding-box;
+	background-image: none;
+	border: 1px solid var(--border-color);
+	border-radius: 0.5rem;
+	color: var(--color-text-main);
+	line-height: 1.4;
+	margin-bottom: 0;
+	width: 100%;
+	padding: 11px 15px;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	resize: vertical;
+	font-family: inherit;
+}
+
+.input:focus,
+.textbox:focus {
+	outline: none;
+	border-color: var(--focus-border-color);
+	box-shadow: 0 0 0 0.15rem rgba(140, 43, 82, 0.15);
+}
+
+.submit-btn {
+	background-color: var(--btn-bg-color);
+	border-color: var(--color-white);
+    border-width: 1px;
+	color: rgba(0, 0, 0, 1);
+	padding: 0.8rem 0.6rem;
+    border-radius: 0.5rem;
+}
+
+.error {
+    font-size: 12px;
+    color: var(--error-color);
+}
+
+.mandatory-field {
+    color: var(--error-color);
+}
